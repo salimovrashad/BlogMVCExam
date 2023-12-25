@@ -1,0 +1,32 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using BlogMVC.ViewModels.LoginVM
+@model LoginVM
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<div class="row justify-content-center mt-5 pt-5">
+    <div class="col-md-6">
+        <h1>Login User</h1>
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            
+            <button type="submit" class="btn-primary">Login</button>
+        </form>
+
+    </div>
+</div>
+
